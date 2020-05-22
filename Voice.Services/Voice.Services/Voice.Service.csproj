@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1517F392-EE57-4599-9BC0-2DAC9BE09AAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voice.Service</RootNamespace>
+    <AssemblyName>Voice.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="_voice_rights_.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\..\Desktop\BRERP\Shared\Invoicer.Shared\bin\Debug\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\Muttico\Muttico\Muttico\MUTTICO.Server\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="KellermanSoftware.NET-Data-Access-Layer">
+      <HintPath>..\..\..\..\Program Files (x86)\Kellerman Software\NET Data Access Layer\KellermanSoftware.NET-Data-Access-Layer.dll</HintPath>
+    </Reference>
+    <Reference Include="KellermanSoftware.NET-Logging-Library">
+      <HintPath>..\..\..\..\Program Files (x86)\Kellerman Software\NET Logging Library\Assemblies\Framework4.5.1\KellermanSoftware.NET-Logging-Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.5.3.0\lib\net451\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.5.3.0\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.5.3.0\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.5.3.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Voice.DbBase, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\db\RBERP.DbBase\RBERP.DbBase\bin\Debug\Voice.DbBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Voice.Shared.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Voice.Shared\bin\Debug\Voice.Shared.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Z.EntityFramework.Extensions">
+      <HintPath>..\..\Muttico\Muttico\Muttico\MUTTICO.Server\bin\Z.EntityFramework.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Caching\CacheLayer.cs" />
+    <Compile Include="Caching\CacheManager.cs" />
+    <Compile Include="Caching\em.cs" />
+    <Compile Include="fnn.cs" />
+    <Compile Include="Helpers\DataExtensions.cs" />
+    <Compile Include="Helpers\DbHelper.cs" />
+    <Compile Include="Helpers\DbHelperDeleteRecordC.cs" />
+    <Compile Include="Helpers\DbHelperPrimaryKeyUpdateC.cs" />
+    <Compile Include="Helpers\DbHelperUpdateDeleteIdC.cs" />
+    <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="Helpers\fn.cs" />
+    <Compile Include="Helpers\ZUpdateContext.cs" />
+    <Compile Include="Interfaces\IDbContextHelper.cs" />
+    <Compile Include="Interfaces\IKellerDBContext.cs" />
+    <Compile Include="LoggerX\LoggerX.cs" />
+    <Compile Include="Services\GranteeService.cs" />
+    <Compile Include="Services\GrantTypeService.cs" />
+    <Compile Include="Services\LoginService.cs" />
+    <Compile Include="Services\MyDriveResourceService.cs" />
+    <Compile Include="Services\ResourceService.cs" />
+    <Compile Include="Services\TokenService.cs" />
+    <Compile Include="Services\VoiceUserService.cs" />
+    <Compile Include="Services\TargetGroupService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
