@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9119F6B-3EAA-428D-BDD2-EDB145D507FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voice.Shared.Core</RootNamespace>
+    <AssemblyName>Voice.Shared.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Extensions.cs" />
+    <Compile Include="Core\IServiceFactory.cs" />
+    <Compile Include="Core\ObjectBase.cs" />
+    <Compile Include="Core\ServiceFactory.cs" />
+    <Compile Include="Core\SimpleMapper.cs" />
+    <Compile Include="dto\dto_analysis_r_grantee_upload_statisticC.cs" />
+    <Compile Include="dto\dto_analysis_r_user_statisticC.cs" />
+    <Compile Include="dto\dto_change_password.cs" />
+    <Compile Include="dto\dto_date_rangeRequestC.cs" />
+    <Compile Include="dto\dto_fs_rangeC.cs" />
+    <Compile Include="dto\dto_getResourceByCategory.cs" />
+    <Compile Include="dto\dto_grant_type_newC.cs" />
+    <Compile Include="dto\dto_grantee_newC.cs" />
+    <Compile Include="dto\dto_grantee_update.cs" />
+    <Compile Include="dto\dto_logged_user.cs" />
+    <Compile Include="dto\dto_login.cs" />
+    <Compile Include="dto\dto_renameResourceC.cs" />
+    <Compile Include="dto\dto_target_group_newC.cs" />
+    <Compile Include="dto\dto_target_group_updateC.cs" />
+    <Compile Include="dto\dto_UserPageRightsDataC.cs" />
+    <Compile Include="dto\dto_user_rights_updateC.cs" />
+    <Compile Include="dto\dto_user_login_access_updateC.cs" />
+    <Compile Include="dto\dto_voice_resource_commentC.cs" />
+    <Compile Include="dto\dto_voice_resource_new.cs" />
+    <Compile Include="dto\dto_voice_sub_admin_newC.cs" />
+    <Compile Include="dto\dto_voice_userC.cs" />
+    <Compile Include="dto\dto_voice_user_newC.cs" />
+    <Compile Include="dto\dto_voice_user_updateC.cs" />
+    <Compile Include="dto\dto_grant_type_updateC.cs" />
+    <Compile Include="Interfaces\IMyDriveResourceService.cs" />
+    <Compile Include="Models\assign_voice_resource_to_mydriveC.cs" />
+    <Compile Include="Models\voice_resource_statisticsC.cs" />
+    <Compile Include="Models\voice_resource_commentC.cs" />
+    <Compile Include="UserRights\pageC.cs" />
+    <Compile Include="UserRights\page_rightC.cs" />
+    <Compile Include="em.cs" />
+    <Compile Include="Interfaces\IGrantTypeService.cs" />
+    <Compile Include="Interfaces\IGranteeService.cs" />
+    <Compile Include="Interfaces\ILoggedInUserService.cs" />
+    <Compile Include="Interfaces\IPCLSettings.cs" />
+    <Compile Include="Interfaces\IResourceService.cs" />
+    <Compile Include="Interfaces\IServiceCoreSingle.cs" />
+    <Compile Include="Interfaces\ITokenService.cs" />
+    <Compile Include="Interfaces\IVoiceUserService.cs" />
+    <Compile Include="Interfaces\ILoginService.cs" />
+    <Compile Include="Interfaces\IMessageDialog.cs" />
+    <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Interfaces\IServiceCore.cs" />
+    <Compile Include="Interfaces\ITargetGroupService.cs" />
+    <Compile Include="Models\assign_grantee_to_target_groupC.cs" />
+    <Compile Include="Models\deletefieldsC.cs" />
+    <Compile Include="Models\granteeC.cs" />
+    <Compile Include="Models\grant_typeC.cs" />
+    <Compile Include="Models\voice_resource_categoryC.cs" />
+    <Compile Include="Models\voice_resourceC.cs" />
+    <Compile Include="Models\serverC.cs" />
+    <Compile Include="Models\target_groupC.cs" />
+    <Compile Include="Models\voice_userC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client\InvoicerDesktop\bin\Debug\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
